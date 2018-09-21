@@ -1,6 +1,6 @@
 import java.util.*;
 public class PlusUltra{
-	//public mergeCounter;
+	public static int mCounter=0;
 	public static void main(String[] args) {
 		//get array from input
 		Scanner keyb=new Scanner(System.in);
@@ -17,7 +17,7 @@ public class PlusUltra{
 		//print each value of numbers to test
 		for(int i=0;i<parts.length;i++){
 			numbers[i]=Integer.parseInt(parts[i]);
-			System.out.print(numbers[i]+",");
+			//System.out.print(numbers[i]+",");
 		}
 
 		//run numbers through the merge sort
@@ -25,9 +25,8 @@ public class PlusUltra{
 
 		//print the sorted array
 		for(int i=0;i<numbers.length;i++){
-			//System.out.print(numbers[i]+",");
+			System.out.print(numbers[i]+",");
 		}
-		
 	}
 
 	public static void merge(int numbers[],int i,int j,int k){
@@ -74,7 +73,9 @@ public class PlusUltra{
 			numbers[i + mergePos] = mergedNumbers[mergePos];
 			System.out.println(numbers[i + mergePos]);
 		}
-		System.out.println("---------------------------");
+		System.out.print("---------------------------");
+		mCounter++;
+		System.out.println(mCounter);
    
 	}
 
